@@ -1,0 +1,9 @@
+.gradle
+.settings
+build
+war/WEB-INF/lib/*
+!war/WEB-INF/lib/appengine-api-1.0-sdk-1.5.2.jar
+!war/WEB-INF/lib/appengine-api-labs-1.5.2.jar
+!war/WEB-INF/lib/gaelyk-1.0.jar
+!war/WEB-INF/lib/groovy-all-1.8.1.jar
+
