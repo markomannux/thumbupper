@@ -3,12 +3,11 @@
 <h1>Welcome</h1>
 
 <p>
-    Congratulations, you've just created your first 
-    <a href="http://gaelyk.appspot.com">Gaelyk</a> application.
+    Hi, welcome to ThumbUpper!
 </p>
 
 <p>
-    Click <a href="/datetime">here</a> to view the current date/time.
+     More exciting content soon!
 </p>
 
 <% include '/WEB-INF/includes/footer.gtpl' %>
