@@ -8,8 +8,5 @@
         <link rel="stylesheet" type="text/css" href="/css/main.css"/>
     </head>
     <body>
-        <div>
-            <img src="/images/gaelyk.png">
-            <img src="/images/google-app-engine-groovy.png" align="right">            
-        </div>
+
         <div>

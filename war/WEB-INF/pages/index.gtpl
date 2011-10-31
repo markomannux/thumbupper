@@ -15,7 +15,8 @@
         hi, <%=user.nickname%>! 
     <% } %> 
     <% if (users.isUserLoggedIn()) { %> 
-        <a href="${users.createLogoutURL('/')}">Logout</a> 
+        <a href="${users.createLogoutURL('/')}">Logout</a>
+        <a href="goal/create">Create Goal</a>
     <%    } else { %> 
         <a href="${users.createLoginURL('/')}">Login</a> 
     <% } %> 
