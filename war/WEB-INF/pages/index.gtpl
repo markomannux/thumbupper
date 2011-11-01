@@ -1,22 +1,34 @@
 <% include '/WEB-INF/includes/header.gtpl' %>
 
-<h1>Welcome</h1>
+<script type="text/javascript">
+    function loadGoalCreateForm() {
+        jQuery.get("/goal/create", function(data) {
+            jQuery("#container").html(data);
+        });
+    }
+    
+    jQuery(document).ready(function() {
+        
+    });
+</script>
 
-<p>
-    Hi, welcome to ThumbUpper!
-</p>
+<div id="container"> 
+    <h1>Welcome</h1>
 
-<p>
-     More exciting content soon!
-</p>
+    <p>
+        Hi, welcome to ThumbUpper!
+    </p>
 
-<div> 
+    <p>
+         More exciting content soon!
+    </p>
+
     <% if (user) { %> 
         hi, <%=user.nickname%>! 
     <% } %> 
     <% if (users.isUserLoggedIn()) { %> 
         <a href="${users.createLogoutURL('/')}">Logout</a>
-        <a href="goal/create">Create Goal</a>
+        <a href="#" onclick="loadGoalCreateForm();">Create Goal</a>
     <%    } else { %> 
         <a href="${users.createLoginURL('/')}">Login</a> 
     <% } %> 
