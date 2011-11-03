@@ -7,4 +7,4 @@ war/WEB-INF/lib/*
 !war/WEB-INF/lib/gaelyk-1.0.jar
 !war/WEB-INF/lib/groovy-all-1.8.1.jar
 *~
-
+*.swp
