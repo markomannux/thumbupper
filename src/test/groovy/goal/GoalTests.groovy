@@ -17,7 +17,7 @@ class GoalTests extends GaelykUnitSpec {
         groovletInstance.get()
          
         then: "the persisted data is found in the response"
-	println groovletInstance.response
+	1 * out.write('hello')
 
     }
 }
