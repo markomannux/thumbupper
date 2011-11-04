@@ -1,5 +1,7 @@
 .gradle
 .settings
 build
+!war/WEB-INF/lib/i_am_an_empty_file.txt
+war/WEB-INF/lib/*
 *~
 *.swp
