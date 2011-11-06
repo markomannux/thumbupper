@@ -18,12 +18,11 @@ class GoalTests extends GaelykUnitSpec {
         
         when: "the initialised groovlet is invoked"
         groovletInstance.get()
-         
-        then: "the persisted data is found in the response"
-	def jb = new groovy.json.JsonBuilder([[summary:'goal1']] )
-	def result = jb.toString()
-	println result
-	//1 * out.write()
 
+        then: "the persisted data is found in the response"
+	interaction {
+		def jb = new groovy.json.JsonBuilder([[summary:'goal1']] )
+		1 * out.write(jb.toString())
+	}
     }
 }
