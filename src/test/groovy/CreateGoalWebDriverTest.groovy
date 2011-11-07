@@ -20,9 +20,9 @@ class CreateGoalWebDriverTest extends GaelykUnitSpec {
 
         when: "the datastore is queried for data"
         driver.get("http://localhost:8080");
-		driver.findElement(By.linkText("Login")).click();
-		driver.findElement(By.name("action")).click();
-		driver.findElement(By.linkText("Create Goal")).click();
+        driver.findElement(By.linkText("Login")).click();
+        driver.findElement(By.name("action")).click();
+        driver.findElement(By.linkText("Create Goal")).click();
 
         then: "the persisted data is found in the datastore"
 

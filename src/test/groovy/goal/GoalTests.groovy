@@ -12,17 +12,23 @@ class GoalTests extends GaelykUnitSpec {
  
     def "the groovlet is used to obtain a list of goals"() {
         given: "some goals exists in the datastore"
-	def goal1 = new Entity("goal")
-	goal1.summary = 'goal1'
-	goal1.save()
-        
+        def goal
+        def goals = []
+        2.times {
+            goal = new Entity("goal")
+            goal.summary = "goal$it"
+            goal.save()
+            goals << goal
+        }
+
         when: "the initialised groovlet is invoked"
         groovletInstance.get()
 
         then: "the persisted data is found in the response"
-	interaction {
-		def jb = new groovy.json.JsonBuilder([[summary:'goal1']] )
-		1 * out.write(jb.toString())
-	}
+        interaction {
+            def jb = new groovy.json.JsonBuilder(goals.collect { [summary:it.summary] } )
+            println jb
+            1 * out.write(jb.toString())
+        }
     }
 }
