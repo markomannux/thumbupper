@@ -5,6 +5,8 @@ get     "/favicon.ico", redirect: "/images/gaelyk-small-favicon.png"
 
 get     "/@ctx", forward: "/WEB-INF/groovy/@ctx/list.groovy"
 
+get     "/@ctx/@id", forward: "/WEB-INF/groovy/@ctx/get.groovy?id=@id"
+
 get     "/@ctx/create", forward: "/WEB-INF/pages/@ctx/create.gtpl"
 
 post    "/@ctx/save", forward: "/WEB-INF/groovy/@ctx/save.groovy"
