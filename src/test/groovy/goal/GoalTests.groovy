@@ -27,7 +27,8 @@ class GoalTests extends GaelykUnitSpec {
         then: "the persisted data is found in the response"
         interaction {
             def jb = new groovy.json.JsonBuilder(goals.collect { [summary:it.summary] } )
-            println jb
+            1 * response.setContentType('application/json')
+            1 * response.setStatus(200)
             1 * out.write(jb.toString())
         }
     }

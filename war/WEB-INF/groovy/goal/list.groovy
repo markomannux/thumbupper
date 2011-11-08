@@ -10,4 +10,6 @@ def goals = entities.collect {
 		[summary:it.summary]
 	}
 def jb = new groovy.json.JsonBuilder(goals)
+response.setContentType('application/json')
+response.setStatus(200)
 out.write (jb.toString())
