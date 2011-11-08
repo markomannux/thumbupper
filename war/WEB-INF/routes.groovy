@@ -3,6 +3,8 @@ get     "/", forward: "/WEB-INF/pages/index.gtpl"
 
 get     "/favicon.ico", redirect: "/images/gaelyk-small-favicon.png"
 
+get     "/@ctx", forward: "/WEB-INF/groovy/@ctx/list.groovy"
+
 get     "/@ctx/create", forward: "/WEB-INF/pages/@ctx/create.gtpl"
 
 post    "/@ctx/save", forward: "/WEB-INF/groovy/@ctx/save.groovy"
