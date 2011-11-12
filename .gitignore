@@ -5,3 +5,4 @@ build
 war/WEB-INF/lib/*
 *~
 *swp
+war/WEB-INF/appengine-generated/*
